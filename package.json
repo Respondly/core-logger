@@ -1,0 +1,29 @@
+{
+  "name": "core-logger",
+  "version": "0.1.0",
+  "description": "Simple, extensible logger built around winston. Easy config for Console, File and Loggly logs",
+  "main": "./index.coffee",
+  "dependencies":
+  {
+    "coffee-script": "^1.9.1",
+    "winston": "1.0.0",
+    "winston-loggly": "1.1.0",
+    "es6-promise": "2.1.1",
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "chai": "^2.2.0",
+    "nock": "^2.0.1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register",
+    "tdd":  "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register --watch"
+  },
+  "author": "Harrison Harnisch <hharnisc@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Respondly/core-logger.git"
+  },
+}
