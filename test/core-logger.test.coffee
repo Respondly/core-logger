@@ -2,7 +2,7 @@ crypto = require 'crypto'
 fs = require 'fs'
 expect = require('chai').expect
 nock = require('nock')
-CoreLogger = require('../index.coffee')
+CoreLogger = require('../src/core-logger.coffee')
 
 fakeApiKey = 'abc123'
 
