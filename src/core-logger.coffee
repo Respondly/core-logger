@@ -2,6 +2,7 @@ _ = require 'lodash'
 winston = require 'winston'
 Loggly = require('winston-loggly').Loggly
 Promise = require('es6-promise').Promise
+Papertrail = require('winston-papertrail').Papertrail
 
 
 class CoreLogger
@@ -44,6 +45,19 @@ class CoreLogger
       logglyTransportParams = _.extend(logglyTransportParams, sharedTransportParams)
 
       @addTransport(Loggly, logglyTransportParams)
+
+    # Take a look at the github repo for avialble options
+    # https://github.com/kenperkins/winston-papertrail#usage
+    if options.logToPaperTrail is true
+      if not options.paperTrailOptions
+        throw new Error('If `logToPaperTrail` is specified then `paperTrailOptions` is needed')
+
+      paperTrailTransportParams = _.extend(program: sharedTransportParams.label, options.paperTrailOptions)
+      paperTrailTransportParams = _.extend(paperTrailTransportParams, sharedTransportParams)
+
+
+      @addTransport(Papertrail, paperTrailTransportParams)
+
     @
 
   addTransport: (transport, args) ->
