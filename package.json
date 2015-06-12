@@ -18,7 +18,7 @@
     "nock": "^2.0.1"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register",
+    "test": "./node_modules/mocha/bin/mocha --colors --compilers coffee:coffee-script/register",
     "tdd":  "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register --watch",
     "prepublish": "coffee -o lib -c src/*.coffee"
   },
