@@ -1,6 +1,6 @@
 {
   "name": "core-logger",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple, extensible logger built around winston. Easy config for Console, File and Loggly logs",
   "main": "./lib/core-logger.js",
   "dependencies":
