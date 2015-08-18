@@ -1,7 +1,7 @@
 _ = require 'lodash'
 winston = require 'winston'
 Loggly = require('winston-loggly').Loggly
-Promise = require('es6-promise').Promise
+Promise = require('bluebird')
 Papertrail = require('winston-papertrail').Papertrail
 
 
